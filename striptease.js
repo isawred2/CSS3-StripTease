@@ -5,7 +5,8 @@ function striptease() {
 	
 	var div = document.createElement('div'),
 	    ref = document.getElementsByTagName('base')[0] || 
-	          document.getElementsByTagName('script')[0];
+	          document.getElementsByTagName('script')[0],
+		el, testString;
 	
 	div.innerHTML = '&shy;<style>						   \
 	* {													   \
@@ -63,9 +64,32 @@ function striptease() {
 	ref.parentNode.insertBefore(div,ref);
 	
 	$("*").each(function() {
+		
+		el = $(this);
 	
-		// Loop over every single element and test for like
-		// $(this).css("background-image")   [ starts with]  "rgba" or "-webkit-gradient" and stuff
+		// Test for gradients or other CSS3 background values
+		testString = el.css("background-image");
+		if (testString.indexOf("-webkit") != -1) {
+			el.css("background-image", "none");
+		}
+		if (testString.indexOf("-moz") != -1) {
+			el.css("background-image", "none");
+		}
+		if (testString.indexOf("-ms") != -1) {
+			el.css("background-image", "none");
+		}
+		if (testString.indexOf("-o") != -1) {
+			el.css("background-image", "none");
+		}
+		if (testString.indexOf("linear") != -1) {
+			el.css("background-image", "none");
+		}
+		if (testString.indexOf("rgba") != -1) {
+			el.css("background-image", "none");
+		}
+		if (testString.indexOf("hsl") != -1) {
+			el.css("background-image", "none");
+		}
 		
 	});
 	
