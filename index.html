@@ -14,7 +14,7 @@
 		
 		<h1>A Bookmarklet to Remove CSS3</h1>
 		
-		<p>Well, sorta. It removes CSS3 properties like shadows and rounded corners and stuff. It doesn't remove CSS3 properties (e.g. RGBa) or CSS3 selectors (e.g. :nth-last-child).</p>
+		<p>Well, sorta. It removes CSS3 properties like shadows and rounded corners and stuff. It has a rudimentary test to look for CSS3 values like "rgba" and "-webkit-gradient" and stuff like that (super incomplete). It can't deal with CSS3 selectors like :nth-last-child. That would require parsing the stylesheet and that's beyond my brain power.</p>
 		
 		<a id="bookmarklet" href="javascript:(function(){function%20loadScript(a,b){var%20c=document.createElement('script');c.type='text/javascript';c.src=a;var%20d=document.getElementsByTagName('head')[0],done=false;c.onload=c.onreadystatechange=function(){if(!done&amp;&amp;(!this.readyState||this.readyState=='loaded'||this.readyState=='complete')){done=true;b()}};d.appendChild(c)}loadScript('jquery-1.6.1.min.js',function(){loadScript('striptease.js',function(){striptease()})})})()">CSS3 StripTease</a>	
 		
