@@ -40,9 +40,9 @@ function striptease() {
 	  -moz-box-shadow:    none              !important;    \
 	  box-shadow:         none              !important;    \
                                                            \
-	  -webkit-background-size: 100% 100%    !important;    \
-	  -moz-background-size:    100% 100%    !important;    \
-	  background-size:         100% 100%    !important;    \
+	  -webkit-background-size: auto         !important;    \
+	  -moz-background-size:    auto         !important;    \
+	  background-size:         auto         !important;    \
                                                            \
 	  -webkit-background-clip: border-box   !important;    \
 	  -moz-background-clip:    border-box   !important;    \
