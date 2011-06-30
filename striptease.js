@@ -8,8 +8,8 @@ function striptease() {
 	          document.getElementsByTagName('script')[0],
 		el, testString;
 	
-	div.innerHTML = '&shy;<style>						   \
-	* {													   \
+	div.innerHTML = '&shy;<style>                          \
+	* {                                                    \
 	  -webkit-border-radius: 0              !important;    \
 	  -moz-border-radius:    0              !important;    \
 	  border-radius:         0              !important;    \
