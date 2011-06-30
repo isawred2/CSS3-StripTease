@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8'>
+		
+	<title>CSS3 Strip Tease</title>
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="page-wrap">
+		
+		<h1>A Bookmarklet to Remove CSS3</h1>
+		
+		<p>Well, sorta. It removes CSS3 properties like shadows and rounded corners and stuff. It doesn't remove CSS3 properties (e.g. RGBa) or CSS3 selectors (e.g. :nth-last-child).</p>
+		
+		<a id="bookmarklet" href="javascript:(function(){function%20loadScript(a,b){var%20c=document.createElement('script');c.type='text/javascript';c.src=a;var%20d=document.getElementsByTagName('head')[0],done=false;c.onload=c.onreadystatechange=function(){if(!done&amp;&amp;(!this.readyState||this.readyState=='loaded'||this.readyState=='complete')){done=true;b()}};d.appendChild(c)}loadScript('jquery-1.6.1.min.js',function(){loadScript('striptease.js',function(){striptease()})})})()">CSS3 StripTease</a>	
+		
+		  &nbsp; &larr; drag to bookmarks bar
+	
+	</div>
+</body>
+
+</html>
